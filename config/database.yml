@@ -1,0 +1,31 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV["APP_RENDER_DATABASE_HOST"].presence || "localhost" %>
+  username: <%= ENV["APP_RENDER_DATABASE_USERNAME"].presence || "codeuser" %>
+  password: <%= ENV["APP_RENDER_DATABASE_USERNAME"].presence || "code123" %>
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+
+development:
+  <<: *default
+  database: <%= ENV["APP_RENDER_DATABASE_NAME"].presence || 'customcodestudio' %>
+test:
+  <<: *default
+  database: <%= ENV["TEST_APP_RENDER_DATABASE_NAME"].presence || 'customcodestudio_test' %>
+production:
+  primary: &primary_production
+    <<: *default
+    url: <%= ENV["DATABASE_URL"] %>
+  cache:
+    <<: *primary_production
+    migrations_paths: db/cache_migrate
+  queue:
+    <<: *primary_production
+    migrations_paths: db/queue_migrate
+  cable:
+    <<: *primary_production
+    database: app_render_production_cable
+    migrations_paths: db/cable_migrate

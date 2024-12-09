@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description" content="CustomCode Studio - Desarrollo de software a medida en Python, Ruby, Java, y tecnologías modernas como Angular, React, AWS y Azure.">
+    <title>CustomCode Studio</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_importmap_tags %>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495E;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .portfolio-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .clients img {
+            width: 100px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CustomCode Studio</h1>
+    <p>Desarrollo de software a medida con tecnologías modernas.</p>
+</header>
+
+<nav>
+    <a href="#about">Sobre Nosotros</a>
+    <a href="#portfolio">Portafolio</a>
+    <a href="#clients">Clientes</a>
+</nav>
+
+<section id="about" class="section">
+    <h2>Sobre Nosotros</h2>
+    <p>En CustomCode Studio, nuestra misión es ofrecer soluciones tecnológicas personalizadas que impulsen el crecimiento y la innovación de nuestros clientes. Nos especializamos en desarrollar software de alta calidad utilizando tecnologías modernas como Python, Ruby on Rails, Java (incluyendo Spring Boot), Angular y React, optimizando procesos y adaptándonos a las necesidades únicas de cada proyecto, siempre guiados por la excelencia, la transparencia y la eficiencia.</p>
+</section>
+
+<section id="portfolio" class="section">
+    <h2>Portafolio</h2>
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <h3>Sistema de Gestión Empresarial</h3>
+            <p>Solución completa para la gestión de inventarios, finanzas y ventas, desarrollada con Django y React.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Plataforma de e-Learning</h3>
+            <p>Plataforma educativa basada en Ruby on Rails, con integración de pagos y gestión de contenido.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Aplicación de Microservicios</h3>
+            <p>Infraestructura basada en FastAPI y Docker, desplegada en AWS con un pipeline CI/CD automatizado.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Sistema de Reservas</h3>
+            <p>Aplicación personalizada para gestión de reservas en tiempo real, desarrollada con Flask y Angular.</p>
+        </div>
+    </div>
+</section>
+
+<section id="mision-vision" style="padding: 50px 20px; background-color: #f9f9f9;">
+  <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2.5em; color: #333; margin-bottom: 20px;">¿Quiénes Somos?</h2>
+    <p style="font-size: 1.2em; color: #555; margin-bottom: 40px;">
+      En <strong>CustomCode Studio</strong>, no solo desarrollamos software, creamos soluciones que transforman ideas en realidades tecnológicas. 
+      Descubre nuestra filosofía y el propósito que nos impulsa a ser los mejores en lo que hacemos.
+    </p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px;">
+      <!-- Misión -->
+      <div style="flex: 1 1 45%; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 20px;">
+        <h3 style="font-size: 2em; color: #007BFF; margin-bottom: 15px;">Nuestra Misión</h3>
+        <p style="font-size: 1.1em; color: #666;">
+          Brindar soluciones tecnológicas personalizadas que impulsen el crecimiento y la innovación de nuestros clientes, a través del desarrollo de 
+          software de alta calidad. Trabajamos con tecnologías modernas como Python, Ruby on Rails, Java (incluyendo Spring Boot), Angular y React, 
+          optimizando cada proceso y adaptándonos a las necesidades únicas de cada proyecto.
+        </p>
+      </div>
+
+      <!-- Visión -->
+      <div style="flex: 1 1 45%; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 20px;">
+        <h3 style="font-size: 2em; color: #007BFF; margin-bottom: 15px;">Nuestra Visión</h3>
+        <p style="font-size: 1.1em; color: #666;">
+          Convertirnos en líderes globales en desarrollo de software a medida, destacándonos por integrar tecnologías innovadoras y enfrentar los desafíos 
+          del mercado con soluciones escalables y efectivas. Construimos relaciones sólidas basadas en la confianza, ofreciendo resultados que superan expectativas.
+        </p>
+      </div>
+    </div>
+
+    <p style="font-size: 1.2em; color: #333; margin-top: 40px;">
+      <strong>¡Construyamos el futuro juntos!</strong> Confiamos en que el éxito se logra con tecnología a medida y un enfoque centrado en ti.
+    </p>
+  </div>
+</section>
+
+<section id="clients" class="section">
+    <h2>Clientes</h2>
+    <div class="clients">
+        <img src="client1_logo.png" alt="Cliente 1">
+        <img src="client2_logo.png" alt="Cliente 2">
+        <img src="client3_logo.png" alt="Cliente 3">
+        <img src="client4_logo.png" alt="Cliente 4">
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 CustomCode Studio. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
