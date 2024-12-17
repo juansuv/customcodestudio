@@ -9,6 +9,6 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
-
-
+import 'bootstrap';
+import * as Popper from "@popperjs/core";
  
